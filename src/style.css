@@ -1,0 +1,299 @@
+:root {
+  --orange: orange;
+  --red: #b64229;
+  --off-white: #f2f2f2;
+  --off-black: #333;
+  --blue-dark: #3a424e;
+  --blue-light: #618ba2;
+  --primary-font: "Roboto", sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  user-select: none;
+  display: flex;
+  gap: 3rem;
+}
+
+nav button {
+  border: none;
+  background: transparent;
+  font-family: var(--primary-font);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative;
+  padding: 20px 0px;
+  transition: 0.3s;
+}
+
+nav button:before {
+  content: "";
+  border-bottom: 1px solid black;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  transition: 0.3s;
+}
+
+nav button:hover:before {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid var(--orange);
+}
+
+nav button:hover {
+  transition: 0.3s;
+  color: var(--orange);
+}
+
+.logo-container {
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 5rem;
+  max-height: 5rem;
+  padding-right: 1rem;
+}
+
+.restaurant-name {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  white-space: nowrap;
+  color: var(--red);
+}
+
+main {
+  height: 100%;
+  background-color: #f2f2f2;
+  padding: 3rem 15rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home h3 {
+  color: var(--red);
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  padding-bottom: 15px;
+}
+
+.home h2 {
+  color: var(--off-black);
+  font-size: 3rem;
+  font-family: var(--primary-font);
+  padding-bottom: 30px;
+}
+
+.home p {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--blue-dark);
+  padding: 30px 120px;
+  color: var(--off-white);
+  font-family: var(--primary-font);
+}
+
+footer h5 {
+  font-size: 1.3rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info i {
+  display: flex;
+  gap: 10px;
+  color: var(--blue-light);
+}
+
+.info p {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--off-white);
+}
+
+.social button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--blue-light);
+  color: var(--off-white);
+  cursor: pointer;
+}
+
+.social button:hover {
+  background-color: var(--blue-dark);
+  transition: 0.3s;
+}
+
+.follow {
+  padding-bottom: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.menu-container img {
+  width: 300px;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.menu-item {
+  display: flex;
+  font-family: var(--primary-font);
+  color: var(--off-black);
+  gap: 15px;
+}
+
+.menu .title {
+  font-family: var(--primary-font);
+  color: var(--off-black);
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.sub-title {
+  color: var(--red);
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.menu-item h4 {
+  font-size: 1.2rem;
+  color: var(--red);
+  border-bottom: 1px solid var(--off-black);
+  font-weight: 400;
+}
+
+.menu-item span {
+  float: right;
+}
+
+.menu-item p {
+  padding-top: 15px;
+  text-align: justify;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-family: var(--primary-font);
+  color: var(--off-black);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info2,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.map iframe {
+  width: 500px;
+  height: 420px;
+  border: none;
+  border-radius: 1rem;
+}
+
+form label {
+  font-size: 18px;
+  border-bottom: 1px var(--off-black) solid;
+}
+
+form input[type="text"],
+form textarea {
+  font-family: var(--primary-font);
+  height: 2rem;
+  border: none;
+  border-radius: 0.5px;
+  background: none;
+  background-color: #e5e5e5;
+  padding: 5px;
+  resize: none;
+}
+
+form input:focus-visible {
+  outline: 1px solid var(--blue-light);
+}
+
+form input[type="submit"] {
+  color: var(--off-white);
+  height: 2rem;
+  width: 6rem;
+  background-color: var(--red);
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer;
+}
